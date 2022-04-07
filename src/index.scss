@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: cursive;
+  background-image: linear-gradient(to bottom right, rgb(115, 31, 211), rgb(104, 164, 233));
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 3px;
+}
+
+
+/* Result Component */
+.result {
+  padding: 1.5rem 2.5rem;
+}
+
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+.content-box,
+.result-content {
+  width: calc(100% - 30%);
+  margin: 13% auto;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.result-content {
+  margin: 3% auto
+}
+
+.radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radioCustomLabel {
+  position: relative;
+  margin: 0;
+  padding: 1rem 5rem 1rem 2.5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.radioCustomButton~.radioCustomLabel:before {
+  position: absolute;
+  top: 17px;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.radioCustomButton:checked~.radioCustomLabel:before {
+  content: "✓";
+  background-size: 27px;
+  border-color: #8bc53f;
+}
+
+/* Animation */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.report {
+  margin: 30px
+}
