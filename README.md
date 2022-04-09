@@ -1,5 +1,6 @@
 # QUIZ JavaScript
-App Simple QUIZ using javaScript &amp; React Application in that:
+
+## Features 
 
 - Each question have multiple radio buttin answer.
 - Answer of question and current step of each question store in localStorage
